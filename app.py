@@ -77,6 +77,9 @@ def main():
 
     heart = load_dataset()
 
+    # Print column names to debug
+    st.write("Columns in heart DataFrame:", heart.columns.tolist())
+
     st.sidebar.title("Feature Selection")
     st.sidebar.image("images/heart-sidebar.png", width=100)
 
