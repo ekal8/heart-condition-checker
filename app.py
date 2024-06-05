@@ -102,9 +102,9 @@ def main():
     df = pd.concat([input_df, heart], axis=0)
     df = df.drop(columns=["HeartDisease"])
 
-    cat_cols = ["BMICategory", "Smoking", "AlcoholDrinking", "Stroke", "DiffWalking",
-                "Sex", "AgeCategory", "Race", "Diabetic", "PhysicalActivity",
-                "GenHealth", "Asthma", "KidneyDisease", "SkinCancer"]
+    cat_cols = ["BMICategory", "Smoking", "AlcoholDrinking",
+                "Sex", "AgeCategory", "Race", "PhysicalActivity",
+                "GenHealth", "Asthma"]
     for cat_col in cat_cols:
         dummy_col = pd.get_dummies(df[cat_col], prefix=cat_col)
         df = pd.concat([df, dummy_col], axis=1)
