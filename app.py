@@ -21,35 +21,35 @@ def main():
 
 
     def user_input_features() -> pd.DataFrame:
-        race = st.sidebar.selectbox("Race", options=(race for race in heart.Race.unique()))
-        sex = st.sidebar.selectbox("Sex", options=(sex for sex in heart.Sex.unique()))
-        age_cat = st.sidebar.selectbox("Age category",
+        Race = st.sidebar.selectbox("Race", options=(race for race in heart.Race.unique()))
+        Sex = st.sidebar.selectbox("Sex", options=(sex for sex in heart.Sex.unique()))
+        AgeCategory = st.sidebar.selectbox("Age category",
                                        options=(age_cat for age_cat in heart.AgeCategory.unique()))
-        bmi_cat = st.sidebar.selectbox("BMI category",
+        BMI = st.sidebar.selectbox("BMI category",
                                        options=(bmi_cat for bmi_cat in heart.BMICategory.unique()))
-        sleep_time = st.sidebar.number_input("How many hours on average do you sleep?", 0, 24, 7)
-        gen_health = st.sidebar.selectbox("How can you define your general health?",
+        SleepTime = st.sidebar.number_input("How many hours on average do you sleep?", 0, 24, 7)
+        GenHealth = st.sidebar.selectbox("How can you define your general health?",
                                           options=(gen_health for gen_health in heart.GenHealth.unique()))
-        phys_act = st.sidebar.selectbox("Have you played any sports (running, biking, etc.)"
+        PhysicalActivity = st.sidebar.selectbox("Have you played any sports (running, biking, etc.)"
                                         " in the past month?", options=("No", "Yes"))
-        smoking = st.sidebar.selectbox("Have you smoked at least 100 cigarettes in"
+        Smoking = st.sidebar.selectbox("Have you smoked at least 100 cigarettes in"
                                        " your entire life (approx. 5 packs)?)",
                                        options=("No", "Yes"))
-        alcohol_drink = st.sidebar.selectbox("Do you have more than 14 drinks of alcohol (men)"
+        AlcoholDrinking = st.sidebar.selectbox("Do you have more than 14 drinks of alcohol (men)"
                                              " or more than 7 (women) in a week?", options=("No", "Yes"))
-        asthma = st.sidebar.selectbox("Do you have asthma?", options=("No", "Yes"))
+        Asthma = st.sidebar.selectbox("Do you have asthma?", options=("No", "Yes"))
 
         features = pd.DataFrame({
-            "SleepTime": [sleep_time],
-            "BMICategory": [bmi_cat],
-            "Smoking": [smoking],
-            "AlcoholDrinking": [alcohol_drink],
-            "Sex": [sex],
-            "AgeCategory": [age_cat],
-            "Race": [race],
-            "PhysicalActivity": [phys_act],
-            "GenHealth": [gen_health],
-            "Asthma": [asthma],
+            "SleepTime": [SleepTime],
+            "BMICategory": [BMI],
+            "Smoking": [Smoking],
+            "AlcoholDrinking": [AlcoholDrinking],
+            "Sex": [Sex],
+            "AgeCategory": [AgeCategory],
+            "Race": [Race],
+            "PhysicalActivity": [PhysicalActivity],
+            "GenHealth": [GenHealth],
+            "Asthma": [Asthma],
 
         })
 
