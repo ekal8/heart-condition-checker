@@ -89,7 +89,7 @@ def main():
             
         **Keep in mind that this results is not equivalent to a medical diagnosis!
         This model would never be adopted by health care facilities because of its less
-        than perfect accuracy, so if you have any problems, consult a human doctor.**
+        than perfect accuracy, so if you have any problems, consult a human doctor.** """)
         
 
 
