@@ -6,7 +6,7 @@ import pickle
 import sklearn
 
 DATASET_PATH = "data/ISP DATASET BARU.csv"
-LOG_MODEL_PATH = "model/LR_model (1).pkl"
+LOG_MODEL_PATH = "model/LR_model.pkl"
 
 
 def main():
