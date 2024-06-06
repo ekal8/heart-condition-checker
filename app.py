@@ -41,7 +41,6 @@ def main():
 
         features = pd.DataFrame({
             "SleepTime": [sleep_time],
-            "BMICategory": [bmi_cat],
             "Smoking": [smoking],
             "AlcoholDrinking": [alcohol_drink],
             "Sex": [sex],
@@ -49,7 +48,8 @@ def main():
             "Race": [race],
             "PhysicalActivity": [phys_act],
             "GenHealth": [gen_health],
-            "Asthma": [asthma]
+            "Asthma": [asthma],
+            "BMICategory": [bmi_cat]   
         })
 
         return features
