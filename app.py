@@ -39,17 +39,17 @@ def main():
                                              " or more than 7 (women) in a week?", options=("No", "Yes"))
         asthma = st.sidebar.selectbox("Do you have asthma?", options=("No", "Yes"))
 
-        features = pd.DataFrame({
-            "SleepTime": [sleep_time],
-            "Smoking": [smoking],
-            "AlcoholDrinking": [alcohol_drink],
-            "Sex": [sex],
-            "AgeCategory": [age_cat],
-            "Race": [race],
-            "PhysicalActivity": [phys_act],
-            "GenHealth": [gen_health],
-            "Asthma": [asthma],
-            "BMICategory": [bmi_cat]   
+         features = pd.DataFrame({
+        "Race": [race],
+        "Sex": [sex],
+        "AgeCategory": [age_cat],
+        "BMICategory": [bmi_cat],
+        "SleepTime": [sleep_time],
+        "GenHealth": [gen_health],
+        "PhysicalActivity": [phys_act],
+        "Smoking": [smoking],
+        "AlcoholDrinking": [alcohol_drink],
+        "Asthma": [asthma] 
         })
 
         return features
