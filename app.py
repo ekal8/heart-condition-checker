@@ -40,16 +40,17 @@ def main():
         asthma = st.sidebar.selectbox("Do you have asthma?", options=("No", "Yes"))
 
         features = pd.DataFrame({
-            "SleepTime": [sleep_time],
-            "Smoking": [smoking],
-            "AlcoholDrinking": [alcohol_drink],
+            "Race": [race],
             "Sex": [sex],
             "AgeCategory": [age_cat],
-            "Race": [race],
-            "PhysicalActivity": [phys_act],
+            "BMICategory": [bmi_cat],
+            "SleepTime": [sleep_time],
             "GenHealth": [gen_health],
-            "Asthma": [asthma],
-            "BMICategory": [bmi_cat]   
+            "PhysicalActivity": [phys_act],
+            "Smoking": [smoking],
+            "AlcoholDrinking": [alcohol_drink],
+            "Asthma": [asthma]
+ 
         })
 
         return features
@@ -100,9 +101,9 @@ def main():
     df = pd.concat([input_df, heart], axis=0)
     df = df.drop(columns=["HeartDisease"])
 
-    cat_cols = ["BMICategory", "Smoking", "AlcoholDrinking",
-                "Sex", "AgeCategory", "Race", "PhysicalActivity",
-                "GenHealth", "Asthma"]
+    cat_cols = ["Smoking", "AlcoholDrinking", "Sex",  
+                "AgeCategory", "Race", "PhysicalActivity",
+                "GenHealth", "Asthma", "BMICategory"]
     for cat_col in cat_cols:
         dummy_col = pd.get_dummies(df[cat_col], prefix=cat_col)
         df = pd.concat([df, dummy_col], axis=1)
