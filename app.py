@@ -22,7 +22,6 @@ def main():
         Race = st.sidebar.selectbox("Race", options=heart["Race"].unique())
         Sex = st.sidebar.selectbox("Sex", options=heart["Sex"].unique())
         AgeCategory = st.sidebar.selectbox("Age category", options=heart["AgeCategory"].unique())
-        BMI = st.sidebar.selectbox("BMI category", options=heart["BMICategory"].unique())
         SleepTime = st.sidebar.number_input("How many hours on average do you sleep?", 0, 24, 7)
         GenHealth = st.sidebar.selectbox("How can you define your general health?", options=heart["GenHealth"].unique())
         PhysicalActivity = st.sidebar.selectbox("Have you played any sports (running, biking, etc.) in the past month?", options=["No", "Yes"])
