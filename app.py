@@ -5,8 +5,8 @@ import numpy as np
 import pickle
 import sklearn
 
-DATASET_PATH = "data/HD.csv"
-LOG_MODEL_PATH = "model/LR_model (2).pkl"
+DATASET_PATH = "data/heart_2020_new.csv"
+LOG_MODEL_PATH = "model/LR_model (3).pkl"
 
 
 def main():
