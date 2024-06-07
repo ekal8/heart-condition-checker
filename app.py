@@ -117,7 +117,7 @@ def main():
     if submit:
         prediction = log_model.predict(df)
         prediction_prob = log_model.predict_proba(df)
-        if prediction == 0:
+        if prediction == No:
             st.markdown(f"**The probability that you'll have"
                         f" heart disease is {round(prediction_prob[0][1] * 100, 2)}%."
                         f" You are healthy!**")
