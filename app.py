@@ -69,7 +69,7 @@ def main():
 
     with col1:
         st.image("images/doctor.png",
-                 caption="I'll help you diagnose your heart health! - Dr. Logistic Regression",
+                 caption="I'll help you diagnose your heart health! - Dr. Machine Learning",
                  width=150)
         submit = st.button("Predict")
     with col2:
@@ -79,9 +79,9 @@ def main():
         estimate your chance of heart disease (yes/no) in seconds!
         
         Here, a logistic regression model using an undersampling technique
-        was constructed using survey data of over 300k US residents from the year 2020.
-        This application is based on it because it has proven to be better than the random forest
-        (it achieves an accuracy of about 80%, which is quite good).
+        was constructed using survey data of over 300k from the year 2020.
+        This application is based on it because it achieves an accuracy 
+        of about 80%, which is quite good.
         
         To predict your heart disease status, simply follow the steps bellow:
         1. Enter the parameters that best describe you;
@@ -122,13 +122,13 @@ def main():
                         f" heart disease is {round(prediction_prob[0][1] * 100, 2)}%."
                         f" You are healthy!**")
             st.image("images/heart-okay.jpg",
-                     caption="Your heart seems to be okay! - Dr. Logistic Regression")
+                     caption="Your heart seems to be okay! - Dr. Machine Learning")
         else:
             st.markdown(f"**The probability that you will have"
                         f" heart disease is {round(prediction_prob[0][1] * 100, 2)}%."
                         f" It sounds like you are not healthy.**")
             st.image("images/heart-bad.jpg",
-                     caption="I'm not satisfied with the condition of your heart! - Dr. Logistic Regression")
+                     caption="I'm not satisfied with the condition of your heart! - Dr. Machine Learning")
 
 
 if __name__ == "__main__":
