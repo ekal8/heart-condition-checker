@@ -79,7 +79,7 @@ def main():
         estimate your chance of heart disease (yes/no) in seconds!
         
         Here, a logistic regression model using an undersampling technique
-        was constructed using survey data of over 300k from the year 2020.
+        was constructed using survey data of over from the year 2020.
         This application is based on it because it achieves an accuracy 
         of about 80%, which is quite good.
         
