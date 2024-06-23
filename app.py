@@ -95,7 +95,7 @@ def main():
     heart = load_dataset()
 
     st.sidebar.title("Feature Selection")
-    st.sidebar.image("images/heart-sidebar.png", width=100)
+    st.sidebar.image("images/heart.png", width=100)
 
     input_df = user_input_features()
     df = pd.concat([input_df, heart], axis=0)
@@ -121,13 +121,13 @@ def main():
             st.markdown(f"**The probability that you'll have"
                         f" heart disease is {round(prediction_prob[0][1] * 100, 2)}%."
                         f" You are healthy!**")
-            st.image("images/heart-okay.jpg",
+            st.image("images/heart-okay1.jpg",
                      caption="Your heart seems to be okay! - Dr. Machine Learning")
         else:
             st.markdown(f"**The probability that you will have"
                         f" heart disease is {round(prediction_prob[0][1] * 100, 2)}%."
                         f" It sounds like you are not healthy.**")
-            st.image("images/heart-bad.jpg",
+            st.image("images/heart-bad.png",
                      caption="I'm not satisfied with the condition of your heart! - Dr. Machine Learning")
 
 
